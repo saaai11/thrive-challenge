@@ -1,0 +1,49 @@
+<!-- <p>quiz works!</p>
+<div>
+  <h1>Welcome to quiz app</h1>
+  <p>
+    This quiz contains questions with multiple choice and each correct answer is
+    awarded with 1 point.
+  </p>
+</div> -->
+
+<h2 class="welcome">Futuruma quiz</h2>
+
+<div *ngIf="currentQuestion === 27; else defaultTemplate" class="results">
+  <h3 class="final-score">Final Score : {{ score }}</h3>
+  <p class="restart">Would you like to restart?</p>
+  <button class="button" (click)="reset()">Reset</button>
+</div>
+
+<ng-template #defaultTemplate>
+  <div class="container">
+    <div class="question-container">
+      <div class="score">Score : {{ score }}</div>
+      <div class="total-questions">
+        Question {{ currentQuestion + 1 }} of {{ questionsList.length }}
+      </div>
+    </div>
+    <div class="questions-card">
+      <div class="questions">
+        <h3>{{ questionsList[currentQuestion]?.question }}</h3>
+      </div>
+      <div
+        class="options"
+        (click)="checkAnswer(currentQuestion, option)"
+        *ngFor="let option of questionsList[currentQuestion]?.possibleAnswers"
+      >
+        <div class="option">{{ option }}</div>
+      </div>
+    </div>
+    <div class="btn">
+      <button
+        [disabled]="currentQuestion == 27"
+        class="button"
+        (click)="nextQuestion()"
+      >
+        Next
+      </button>
+    </div>
+  </div>
+</ng-template>
+<div *ngFor="let question of questions$ | async; let i = index"></div>

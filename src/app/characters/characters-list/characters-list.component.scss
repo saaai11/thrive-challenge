@@ -1,0 +1,37 @@
+:host {
+  .card {
+    margin: 25px auto;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #f5fbf1;
+    background-color: #fcf7eb;
+    box-shadow: 1px 1px 5px 1px #aaaaaa, -1px -1px 5px 1px #aaaaaa;
+    width: 60%;
+  }
+  .first-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  span {
+    font-weight: 600;
+  }
+  .first-row {
+  }
+  .second-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .sayings {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 60px 40px 20px;
+  }
+  .saying {
+    display: flex;
+    margin: 10px 40px;
+  }
+}

@@ -1,0 +1,27 @@
+<div class="card" *ngIf="character$ | async as character">
+  <div class="first-card">
+    <div class="first-row">
+      <img src="{{ character.images.main }}" alt="" />
+    </div>
+    <div class="second-row">
+      <div>
+        <span>Name :</span> {{ character.name.first }}
+        {{ character.name.middle }}
+        {{ character.name.last }}
+      </div>
+      <div><span>Age : </span>{{ character.age }}</div>
+      <div><span>Gender : </span>{{ character.gender }}</div>
+
+      <div><span>Home Planet : </span>{{ character.homePlanet }}</div>
+
+      <div><span>Species : </span>{{ character.species }}</div>
+
+      <div><span>Occupation : </span>{{ character.occupation }}</div>
+    </div>
+  </div>
+
+  <h4 class="sayings">Sayings :</h4>
+  <div class="saying" *ngFor="let saying of character.sayings">
+    <div>{{ saying }}</div>
+  </div>
+</div>

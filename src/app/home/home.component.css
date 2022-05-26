@@ -1,0 +1,30 @@
+:host .container {
+  margin: 25px auto;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #f5fbf1;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 1px 1px 5px 1px #aaaaaa, -1px -1px 5px 1px #aaaaaa;
+          box-shadow: 1px 1px 5px 1px #aaaaaa, -1px -1px 5px 1px #aaaaaa;
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 18px;
+}
+
+:host .years {
+  margin: 10px 0;
+}
+
+:host span {
+  font-weight: 600;
+}
+
+:host .name:nth-child(1) {
+  margin-top: 5px;
+}
+/*# sourceMappingURL=home.component.css.map */

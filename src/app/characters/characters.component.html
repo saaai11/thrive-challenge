@@ -1,0 +1,18 @@
+<div class="main">
+  <div
+    class="container"
+    (click)="navigate(i)"
+    *ngFor="let character of characters$ | async; let i = index"
+  >
+    <div class="card">
+      <div class="first-row">
+        <img src="{{ character.images.main }}" alt="" />
+      </div>
+
+      <div class="content">
+        {{ character.name.first }} {{ character.name.middle }}
+        {{ character.name.last }}
+      </div>
+    </div>
+  </div>
+</div>

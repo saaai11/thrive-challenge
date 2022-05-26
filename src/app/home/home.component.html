@@ -1,0 +1,15 @@
+<div class="container" *ngFor="let info of info$ | async">
+  <h4 class="synopsis">Synopsis :</h4>
+  <div class="synopsis-info">{{ info.synopsis }}</div>
+  <div class="years"><span>Years Aired :</span> {{ info.yearsAired }}</div>
+
+  <div class="info"><span>Info Id :</span> {{ info.id }}</div>
+
+  <h4>Creators</h4>
+
+  <div *ngFor="let creator of info.creators">
+    <li class="name">
+      <a href="{{ creator.url }}">{{ creator.name }}</a>
+    </li>
+  </div>
+</div>

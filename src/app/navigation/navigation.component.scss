@@ -1,0 +1,17 @@
+:host {
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100px;
+    background-color: #688db4;
+    margin: auto 0;
+  }
+  .characters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f7f5f2;
+    font-size: 30px;
+  }
+}
